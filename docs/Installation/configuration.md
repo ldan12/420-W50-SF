@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Configuration de l'environnement
+# Configuration de l'environnement mobile
 
 Dans le cadre de ce cours, nous développerons des application mobiles en `React native`.
 
