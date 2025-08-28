@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_420_w_50_sf=self.webpackChunk_420_w_50_sf||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/420-W50-SF/blog","blogTitle":"Blog","authorsListPath":"/420-W50-SF/blog/authors"}')}}]);
