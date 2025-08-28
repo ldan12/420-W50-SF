@@ -10,7 +10,7 @@ const config = {
   // Déploiement GitHub Pages
   url: "https://ldan12.github.io",     // ton GitHub username
   baseUrl: "/420-W50-SF/",      // ton repo GitHub
-  organizationName: "ldan12",          // ton GitHub username
+  organizationName: "ldan12",          // ton GitHub usernamew
   projectName: "420-W50-SF",    // le repo
   deploymentBranch: "gh-pages",          // branche de déploiement
 
