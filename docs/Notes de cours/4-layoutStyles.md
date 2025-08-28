@@ -5,7 +5,7 @@ En React Native, les styles sont définis avec l'objet `StyleSheet.create` au li
 
 ## Définition de styles
 
-DAne le cadre de ce cours, on pourra placer les styles en dessous de la définition de l'interface utilisateur :
+Dans le cadre de ce cours, on pourra placer les styles en dessous de la définition de l'interface utilisateur :
 
 ```tsx
 import { Text, StyleSheet } from "react-native";
