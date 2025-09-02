@@ -51,9 +51,9 @@ Le code s’exécute :
 
 Très utile pour déclencher une action en réponse à un changement de valeur.
 
-Note : Il est aussi possible d'autres variables dans le tableau des dépendances si l'effet est applicable au changement de valeur de l'une **ou** l'autre des variables.
+Note : Il est aussi possible de préciser d'autres variables dans le tableau des dépendances si l'effet est applicable au changement de valeur de l'une **ou** l'autre des variables.
 
-Pensons au retrait/ajout d'élements dans une liste et à un filtre de recherche sur cette liste. Dans les 2 cas, le composant chargé de l'affichage de la liste être mis à jour dans l'effet. On aura donc la liste elle-même comme première variable et le filtre de recherche comme deuxième variable.
+Pensons au retrait/ajout d'éléments dans une liste et à un filtre de recherche sur cette liste. Dans les 2 cas, le composant chargé de l'affichage de la liste doit être mis à jour dans l'effet. On aura donc la liste elle-même comme première variable et le filtre de recherche comme deuxième variable.
 
 ```tsx
 useEffect(() => {
@@ -73,7 +73,7 @@ useEffect(() => {
 }, [maVariable2]);
 ```
 
-Avoir 2 effets différents sur la même variables est possible, mais à condition que la logique de l'effet soit **complètement différente**. Par exemple une mise à jour d'un composant dans le premier effet et une journalisation (log) dans un 2e effet.
+Avoir 2 effets différents sur la même variable est possible, mais à condition que la logique de l'effet soit **complètement différente**. Par exemple une mise à jour d'un composant dans le premier effet et une journalisation (log) dans un 2e effet.
 
 ### Cas 3 : Sans tableau de dépendances
 
