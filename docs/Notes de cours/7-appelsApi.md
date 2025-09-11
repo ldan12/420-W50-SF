@@ -1,4 +1,4 @@
-# Introduction à Axios et Architecture API dans React Native
+# Introduction aux appels API dans React Native
 
 ## Structure du dossier API
 
