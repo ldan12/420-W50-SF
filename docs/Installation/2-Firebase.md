@@ -2,7 +2,7 @@
 
 ## Qu'est-ce que Firebase ?
 
-**Firebase** est une plateforme de développement d’applications créée par Google.Elle fournit une série de services prêts à l’emploi qui permettent aux développeurs de créer plus rapidement des applications web et mobiles, sans avoir à mettre en place toute l’infrastructure serveur eux-mêmes.
+**Firebase** est une plateforme de développement d’applications créée par Google. Elle fournit une série de services prêts à l’emploi qui permettent aux développeurs de créer plus rapidement des applications web et mobiles, sans avoir à mettre en place toute l’infrastructure serveur eux-mêmes.
 
 Voici les principaux services que Firebase offre :
 
@@ -26,7 +26,7 @@ Firebase Storage : stockage de fichiers (images, vidéos, PDF, etc.) avec règle
 
 1. **Firebase** nécessite un compte **Google**. Si vous n'en n'avez pas, prenez quelques instants pour vous en créer un.
 
-2. Naviguez vers https://firebase.google.com/ et authentifez vous avec le compte créé à l'étape 1) si ce n'est pas déjà fait.
+2. Naviguez vers https://firebase.google.com/ et authentifez vous avec votre compte Google, si ce n'est pas déjà fait.
 
 3. Accédez à la console :
 
