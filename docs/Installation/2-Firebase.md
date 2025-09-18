@@ -38,11 +38,11 @@ Firebase Storage : stockage de fichiers (images, vidéos, PDF, etc.) avec règle
 
 et nommez-le `ExerciceFirebase`, il sera prêt lorsque le premier exercice sera publié. Dans le processus, **n'activez pas** les options Gemini et Google analytics.
 
-5. Une fois sur le tableau de bord du projet, créez une application web :
+5. Une fois sur le tableau de bord du projet, créez une application **web** :
 
 ![App](/img/app.png)
 
-6. Donnez lui un nom en lien avec le projet (ex : `exerciceApp`). **N'activez pas** le hosting Firebase. Confirmez avec le `Register app`.
+6. Donnez-lui un nom en lien avec le projet (ex : `exerciceApp`). **N'activez pas** le hosting Firebase. Confirmez avec le `Register app`.
 
 7. On vous présentera ensuite la configuration de votre application. Nous y reviendrons plus tard pour l'intégration dans le code. Défilez l'écran et cliquez sur `Return to console`
 
