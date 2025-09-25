@@ -28,7 +28,7 @@ Créez ensuite une base de données :
 
 Suivez les étapes jusqu'à l'option de démarrage pour laquelle il faudra choisir l'option suivante :
 
-![irestore DB test](firestoredbtest.png)
+![irestore DB test](/img/firestoredbtest.png)
 
 Lorsque fait, votre base de données NoSQL sera créée.
 
