@@ -13,6 +13,27 @@ Firestore, aussi appelé Cloud Firestore, est une base de données NoSQL propos�
 | **Multi-plateforme**       | Android, iOS, Web, React Native, Node.js, etc.                                  |
 | **Sécurité**               | Règles de sécurité Firebase pour gérer l'accès par utilisateur ou rôle          |
 
+
+## Création de la base de données
+
+Avant toute chose, il faut provisionner une base de données sur **Firebase**
+
+Accédez au menu Créer/Firestore Database depuis le tableau de bord de votre projet :
+
+![Firestore](/img/firestore.png)
+
+Créez ensuite une base de données :
+
+![Firestore DB](/img/firestoredb.png)
+
+Suivez les étapes jusqu'à l'option de démarrage pour laquelle il faudra choisir l'option suivante :
+
+![irestore DB test](firestoredbtest.png)
+
+Lorsque fait, votre base de données NoSQL sera créée.
+
+**Note** : Vous n'avez pas à pré-créer vos collections (tables), ce sera fait lors de votre premier appel de stockage.
+
 ## Chargement de Firestore
 
 **Firestore** est lié à la configuration **Firebase** de l'application (fichier `firebaseConfig.ts`). Afin de charger **Firestore**, il suffit de le rendre disponible de la façon suivante dans le fichier de configuration :
