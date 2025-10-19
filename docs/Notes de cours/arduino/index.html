@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Introduction à l&#x27;Arduino, à PlatformIO et aux notions d’électricité pour l’IoT | Mobile et objets connectés</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://ldan12.github.io/420-W50-SF/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://ldan12.github.io/420-W50-SF/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://ldan12.github.io/420-W50-SF/docs/Notes de cours/arduino"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Introduction à l&#x27;Arduino, à PlatformIO et aux notions d’électricité pour l’IoT | Mobile et objets connectés"><meta data-rh="true" name="description" content="Qu’est-ce qu’un microcontrôleur ?"><meta data-rh="true" property="og:description" content="Qu’est-ce qu’un microcontrôleur ?"><link data-rh="true" rel="icon" href="/420-W50-SF/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://ldan12.github.io/420-W50-SF/docs/Notes de cours/arduino"><link data-rh="true" rel="alternate" href="https://ldan12.github.io/420-W50-SF/docs/Notes de cours/arduino" hreflang="en"><link data-rh="true" rel="alternate" href="https://ldan12.github.io/420-W50-SF/docs/Notes de cours/arduino" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/420-W50-SF/blog/rss.xml" title="Mobile et objets connectés RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/420-W50-SF/blog/atom.xml" title="Mobile et objets connectés Atom Feed"><link rel="stylesheet" href="/420-W50-SF/assets/css/styles.ebd0f903.css">
-<script src="/420-W50-SF/assets/js/runtime~main.83f7f1b9.js" defer="defer"></script>
+<script src="/420-W50-SF/assets/js/runtime~main.25dc86ef.js" defer="defer"></script>
 <script src="/420-W50-SF/assets/js/main.c7f80778.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,7 +15,7 @@
 <!-- -->Il contient :</p>
 <ul>
 <li>Un <strong>processeur (CPU)</strong> : exécute les instructions.</li>
-<li>De la <strong>mémoire Flash</strong> : stocke le programme (firmware).</li>
+<li>De la <strong>mémoire Flash</strong> : stocke le programme (<em>firmware</em>).</li>
 <li>De la <strong>RAM</strong> : conserve les variables temporaires.</li>
 <li>Des <strong>ports d’entrée/sortie (I/O)</strong> : communiquent avec le monde extérieur.</li>
 </ul>
@@ -36,7 +36,7 @@
 </ol>
 <ul>
 <li>PlatformIO compile le code C++ en binaire machine (.bin).</li>
-<li>Ce fichier est envoyé à la carte via le bootloader.</li>
+<li>Ce fichier est envoyé à la carte via le <em>bootloader</em>.</li>
 </ul>
 <ol start="2">
 <li>Démarrage du microcontrôleur</li>
@@ -70,7 +70,7 @@
 <li>Résistance = étroitesse du tuyau.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="le-rôle-du-gnd-masse">Le rôle du GND (masse)<a href="#le-rôle-du-gnd-masse" class="hash-link" aria-label="Direct link to Le rôle du GND (masse)" title="Direct link to Le rôle du GND (masse)">​</a></h3>
-<p>Le GND (Ground) est le point de référence de tout le circuit.
+<p>Le GND (<em>Ground</em>) est le point de référence de tout le circuit.
 C’est là que le courant retourne après avoir traversé les composants.</p>
 <p>Exemple :</p>
 <p>Si on alimente une LED avec la broche D13,
@@ -86,7 +86,7 @@ Ce trajet complet forme une boucle fermée : sans GND, le courant ne circule pas
 <li>Dans le pire des cas : le microcontrôleur est grillé.</li>
 </ul>
 <p><strong>Toujours vérifier les connexions avant d’alimenter le circuit !</strong></p>
-<p>Tension selon la carte</p>
+<p>Tensions selon la carte:</p>
 <table><thead><tr><th>Carte</th><th>Tension logique</th><th>Tension d’alimentation typique</th></tr></thead><tbody><tr><td>Arduino Uno</td><td>5V</td><td>USB ou Jack 9V</td></tr><tr><td>ESP32 / ESP8266</td><td>3.3V</td><td>USB uniquement</td></tr></tbody></table>
 <p><strong>Envoyer 5V sur une broche 3.3V détruit l’entrée du microcontrôleur !</strong></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="premier-exemple---led">Premier exemple - LED<a href="#premier-exemple---led" class="hash-link" aria-label="Direct link to Premier exemple - LED" title="Direct link to Premier exemple - LED">​</a></h2>
@@ -104,16 +104,16 @@ Ce trajet complet forme une boucle fermée : sans GND, le courant ne circule pas
 <li>Le courant passe dans la LED → la résistance → le GND.</li>
 <li>La LED s’allume</li>
 <li>Puis LOW coupe le courant → LED s’éteint.</li>
-<li>Ce processus s&#x27;effectue en boucle avec délai d&#x27;une demi seconde entre chaque passe</li>
+<li>Ce processus s&#x27;effectue en boucle avec délai d&#x27;une demi-seconde entre chaque passe</li>
 </ul>
 <p>→ Sans connexion au GND, la LED ne s’allumerait jamais.
-→ Et si on reliait accidentellement D13 directement à GND sans résistance, on raut court-circuit immédiat.</p>
+→ Et si on reliait accidentellement D13 directement à GND sans résistance, on aura un court-circuit immédiat.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="capteurs-et-actionneurs">Capteurs et actionneurs<a href="#capteurs-et-actionneurs" class="hash-link" aria-label="Direct link to Capteurs et actionneurs" title="Direct link to Capteurs et actionneurs">​</a></h2>
 <table><thead><tr><th>Type</th><th>Exemple</th><th>Direction</th><th>Rôle</th></tr></thead><tbody><tr><td><strong>Capteur</strong></td><td>Température, bouton, lumière</td><td>Entrée</td><td>Fournit une information</td></tr><tr><td><strong>Actionneur</strong></td><td>LED, moteur, relais</td><td>Sortie</td><td>Exécute une action</td></tr></tbody></table>
 <p>Le GND sert aussi à référencer tous les capteurs.</p>
 <p>En d&#x27;autres mots, si le capteur n’a pas le même GND que la carte, les lectures seront fausses, instables ou impossibles.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="cycle-de-développement-complet">Cycle de développement complet<a href="#cycle-de-développement-complet" class="hash-link" aria-label="Direct link to Cycle de développement complet" title="Direct link to Cycle de développement complet">​</a></h2>
-<table><thead><tr><th>Étape</th><th>Élément impliqué</th><th>Description</th></tr></thead><tbody><tr><td>1. Écriture du code</td><td>Ordinateur + PlatformIO</td><td>Programmation du firmware</td></tr><tr><td>2. Compilation</td><td>Toolchain AVR/ESP</td><td>Conversion en langage machine</td></tr><tr><td>3. Téléversement</td><td>USB Bootloader</td><td>Transfert sur la carte</td></tr><tr><td>4. Exécution</td><td>Microcontrôleur</td><td><code>setup()</code> puis <code>loop()</code></td></tr><tr><td>5. Interaction</td><td>Broches + GND</td><td>Communication avec les capteurs/actionneurs</td></tr></tbody></table>
+<table><thead><tr><th>Étape</th><th>Élément impliqué</th><th>Description</th></tr></thead><tbody><tr><td>1. Écriture du code</td><td>Ordinateur + PlatformIO</td><td>Programmation du <em>firmware</em></td></tr><tr><td>2. Compilation</td><td>Toolchain AVR/ESP</td><td>Conversion en langage machine</td></tr><tr><td>3. Téléversement</td><td>USB Bootloader</td><td>Transfert sur la carte</td></tr><tr><td>4. Exécution</td><td>Microcontrôleur</td><td><code>setup()</code> puis <code>loop()</code></td></tr><tr><td>5. Interaction</td><td>Broches + GND</td><td>Communication avec les capteurs/actionneurs</td></tr></tbody></table>
 <p>Toujours penser en termes de boucle électrique :</p>
 <p>une sortie → un composant → le GND.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="sécurité-et-bonnes-pratiques">Sécurité et bonnes pratiques<a href="#sécurité-et-bonnes-pratiques" class="hash-link" aria-label="Direct link to Sécurité et bonnes pratiques" title="Direct link to Sécurité et bonnes pratiques">​</a></h2>
@@ -122,7 +122,7 @@ Ce trajet complet forme une boucle fermée : sans GND, le courant ne circule pas
 <li>Relier tous les GND entre les composants.</li>
 <li>Vérifier les connexions avant d’alimenter.</li>
 <li>Utiliser des résistances pour limiter le courant.</li>
-<li>Débrancher la carte avant de modifier le montage (branchement des composantes).</li>
+<li>Débrancher la carte avant de modifier le montage (branchement des composants).</li>
 </ul>
 <p><strong>Ne jamais :</strong></p>
 <ul>
