@@ -6,7 +6,7 @@ Un **microcontrôleur** est un petit ordinateur intégré dans un circuit élect
 Il contient :
 
 - Un **processeur (CPU)** : exécute les instructions.  
-- De la **mémoire Flash** : stocke le programme (firmware).  
+- De la **mémoire Flash** : stocke le programme (*firmware*).  
 - De la **RAM** : conserve les variables temporaires.  
 - Des **ports d’entrée/sortie (I/O)** : communiquent avec le monde extérieur.
 
@@ -62,7 +62,7 @@ int myFunction(int x, int y) {
 
 1. Compilation sur l’ordinateur
   - PlatformIO compile le code C++ en binaire machine (.bin).
-  - Ce fichier est envoyé à la carte via le bootloader.
+  - Ce fichier est envoyé à la carte via le *bootloader*.
 
 2. Démarrage du microcontrôleur
   - Dès qu’on alimente la carte, le programme démarre.
@@ -100,7 +100,7 @@ Analogie :
 
 ### Le rôle du GND (masse)
 
-Le GND (Ground) est le point de référence de tout le circuit.
+Le GND (*Ground*) est le point de référence de tout le circuit.
 C’est là que le courant retourne après avoir traversé les composants.
 
 Exemple :
@@ -122,7 +122,7 @@ Résultat :
 
 **Toujours vérifier les connexions avant d’alimenter le circuit !**
 
-Tension selon la carte
+Tensions selon la carte:
 | Carte           | Tension logique | Tension d’alimentation typique |
 | --------------- | --------------- | ------------------------------ |
 | Arduino Uno     | 5V              | USB ou Jack 9V                 |
@@ -162,11 +162,11 @@ Que se passe-t-il ici ?
   - Le courant passe dans la LED → la résistance → le GND.  
   - La LED s’allume
   - Puis LOW coupe le courant → LED s’éteint.
-  - Ce processus s'effectue en boucle avec délai d'une demi seconde entre chaque passe
+  - Ce processus s'effectue en boucle avec délai d'une demi-seconde entre chaque passe
 
 
 → Sans connexion au GND, la LED ne s’allumerait jamais.
-→ Et si on reliait accidentellement D13 directement à GND sans résistance, on raut court-circuit immédiat.
+→ Et si on reliait accidentellement D13 directement à GND sans résistance, on aura un court-circuit immédiat.
 
 ## Capteurs et actionneurs
 
@@ -183,7 +183,7 @@ En d'autres mots, si le capteur n’a pas le même GND que la carte, les lecture
 
 | Étape               | Élément impliqué        | Description                                 |
 | ------------------- | ----------------------- | ------------------------------------------- |
-| 1. Écriture du code | Ordinateur + PlatformIO | Programmation du firmware                   |
+| 1. Écriture du code | Ordinateur + PlatformIO | Programmation du *firmware*                   |
 | 2. Compilation      | Toolchain AVR/ESP       | Conversion en langage machine               |
 | 3. Téléversement    | USB Bootloader          | Transfert sur la carte                      |
 | 4. Exécution        | Microcontrôleur         | `setup()` puis `loop()`                     |
@@ -201,7 +201,7 @@ une sortie → un composant → le GND.
   - Relier tous les GND entre les composants.
   - Vérifier les connexions avant d’alimenter.
   - Utiliser des résistances pour limiter le courant.
-  - Débrancher la carte avant de modifier le montage (branchement des composantes).
+  - Débrancher la carte avant de modifier le montage (branchement des composants).
 
 **Ne jamais :**
 
