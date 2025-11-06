@@ -1,4 +1,4 @@
-# Le *Joystick* — Présentation complète
+# Le *Joystick*
 
 ## 1. Qu’est-ce qu’un *Joystick* ?
 

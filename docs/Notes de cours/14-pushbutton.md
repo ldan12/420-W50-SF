@@ -1,4 +1,4 @@
-# Le *Push Button* (Bouton-poussoir) — Présentation complète
+# Le *Push Button*
 
 ## 1. Qu’est-ce qu’un *push button* ?
 
