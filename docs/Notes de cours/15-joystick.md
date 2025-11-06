@@ -9,7 +9,7 @@ Le *joystick* est un capteur analogique permettant de détecter des mouvements d
 
 Il est souvent équipé d’un bouton poussoir intégré pour effectuer une action lors de l’appui.
 
-Broches typiques, on choisi 3 pins digitales :
+Broches typiques, le X et le Y sont sur des broches **analogues**, le bouton est sur une pin digitale :
 
 - JOY_X → axe horizontal
 - JOY_Y → axe vertical
@@ -33,7 +33,7 @@ int yVal = analogRead(JOY_Y);  // 0 (haut) → max (bas)
 int swVal = digitalRead(JOY_BTN); // LOW si appuyé, HIGH si relâché
 ```
 
-Les valeurs possibles en X et en Y varient de **0 à 4095**. Lorsque le *joystick* est relâché, sa position est au centre, soit **2048**.
+Les valeurs possibles en X et en Y varient de **0 à 4095**. Lorsque le *joystick* est au neutre, sa position est au centre, soit **2048**.
 
 La zone de repos (zone pour laquelle on ne détectera pas d'action du *joystick*) est souvent considérée entre **1000 et 3000**, ce qui fait que ces 2 valeurs deviennent les bornes de détection :
 
